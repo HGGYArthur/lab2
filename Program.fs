@@ -104,6 +104,7 @@ let task1_input() =
 ///На основе списка вещественных чисел получить список целых чисел, отбросив дробную часть (ввод с клавиатуры). 
 let task1_random() = 
 
+    //.Запрос числа
     let rec input_num() = 
         let num = string_to_numb (Console.ReadLine()) "float"
         match num with
@@ -112,6 +113,7 @@ let task1_random() =
             printfn "Ошибка ввода"
             input_num()
 
+    ///Запрос размерности
     let rec list_size() = 
         let size = string_to_numb (Console.ReadLine()) "uint"
         match size with
@@ -120,6 +122,7 @@ let task1_random() =
             printfn "Ошибка ввода"
             list_size()
 
+    ///Генерация случайного списка вещественных чисел
     let generate_random count min max =
         let rand = Random()
         [ for _ in 1 .. count -> rand.NextDouble() * (max - min) + min ]
