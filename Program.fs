@@ -97,7 +97,7 @@ let task1_input() =
     List.map(fun p -> printf "%.3f " p) float_list
 
     printf "]\nСписок из целых чисел: ["
-    List.map(fun p -> printf "%d " (int(p))) float_list //Преобразование списка дробных в список целых
+    List.iter ( fun p -> printf "%d " p) (List.map(fun p ->(int(p))) float_list ) //Преобразование списка дробных в список целых
     printf "]"
     0
 
@@ -142,7 +142,7 @@ let task1_random() =
     List.map(fun p -> printf "%.3f " p) float_list
 
     printf "]\nСписок из целых чисел: ["
-    List.map(fun p -> printf "%d " (int(p))) float_list //Преобразование списка дробных в список целых
+    List.iter ( fun p -> printf "%d " p) (List.map(fun p ->(int(p))) float_list ) //Преобразование списка дробных в список целых
     printf "]"
     0
 
